@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/mats/PolygonShape/K-PolyBak.vs" type="Script" id=1]
+
+[node name="poly" type="CollisionPolygon2D"]
+visible = false
+position = Vector2( 8, 32 )
+scale = Vector2( 2.0625, 2.64063 )
+polygon = PoolVector2Array( 5.04242, -27.2662, -10.4727, -27.2662, -18.2303, -36.355, -11.6364, -21.2071, 3.87879, -21.2071, 12.8, -36.355 )
+disabled = true
+script = ExtResource( 1 )

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://LevelEditor/ObjectSelectPanel/ObjectSelectPanel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LevelEditor/SelectedObject/SelectedObject.tscn" type="PackedScene" id=2]
+[ext_resource path="res://LevelEditor/Camera/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://LevelEditor/EditorFIleDialog/EditorFileDialog.tscn" type="PackedScene" id=4]
+
+[node name="LevelEditor" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2( 0.4, 0.4 )
+transform = Transform2D( 0.4, 0, 0, 0.4, 0, 0 )
+
+[node name="EditorFileDialog" parent="CanvasLayer" groups=[
+"_on_Player_ready",
+"_on_SceneSystem_scene_change",
+] instance=ExtResource( 4 )]
+visible = true
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = -157.5
+margin_top = 0.0
+margin_right = 157.5
+margin_bottom = 233.0
+grow_vertical = 1
+rect_min_size = Vector2( 224, 300 )
+resizable = true
+
+[node name="ObjectSelectPanel" parent="." groups=[
+"_on_Player_ready",
+"_on_SceneSystem_scene_change",
+] instance=ExtResource( 1 )]
+SelectedObjectNode = NodePath("../SelectedObject")
+
+[node name="SelectedObject" parent="." groups=[
+"KingPixelFrogRecievers",
+"_on_Player_ready",
+"_on_SceneSystem_scene_change",
+] instance=ExtResource( 2 )]
+z_index = 3
+
+[node name="Camera2D" parent="." groups=[
+"KingPixelFrogRecievers",
+"_on_Player_ready",
+"_on_SceneSystem_scene_change",
+] instance=ExtResource( 3 )]
+position = Vector2( -12.7134, 0 )
+zoom = Vector2( 5, 5 )
+limit_left = -10000
+limit_top = -10000
+limit_right = 10000
+limit_bottom = 10000
+zoomspeed = 10.0
+zoomMax = 5.0
+
+[editable path="ObjectSelectPanel"]

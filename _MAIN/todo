@@ -1,0 +1,44 @@
+
+#refacture player
+#    remove enheritance
+
+    cayote erea
+#    retrieve resource
+#        full system
+#            player rename_
+#    hud
+#        hud inside player *
+#        hud inside camera
+
+#display modes
+#    var labels
+    
+#create  static containers
+#    test atlas to retrieve texture
+
+improve animated containers
+    anim.frames.get_frame(anim, int)
+    ninepatch rect
+
+#structure environment
+#    decoration platforms etc
+#filedialog
+#   camera
+
+setup ansimus art pack
+
+flip_h
+paralax setup
+
+cameras
+    teleport player with cursor and save position for respawn
+    
+
+map tab keys
+#map container keys
+#file dialog
+procudural support
+autotile scenes
+set bitmap on certain tiles by code
+$tile coins
+$tile enemys

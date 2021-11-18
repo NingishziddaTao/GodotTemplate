@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/ARCADE.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Global_/SaveSystem/SaveSystem.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="SaveSystem" type="Node"]
+script = ExtResource( 2 )
+autoremove_savefile = true
+
+[node name="label" type="Label" parent="."]
+margin_left = 463.651
+margin_top = 151.191
+margin_right = 503.651
+margin_bottom = 201.191
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label2" type="Label" parent="."]
+margin_left = 496.409
+margin_top = 229.306
+margin_right = 536.409
+margin_bottom = 279.306
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

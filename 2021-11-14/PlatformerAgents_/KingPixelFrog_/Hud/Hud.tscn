@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://PlatformerAgents_/KingPixelFrog_/Hud/mats/Live Bar.png" type="Texture" id=1]
+[ext_resource path="res://PlatformerAgents_/KingPixelFrog_/Hud/Hud.gd" type="Script" id=2]
+[ext_resource path="res://PlatformerAgents_/KingPixelFrog_/Hud/mats/12-Lives and Coins.Cannon.res" type="SpriteFrames" id=3]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="HealthContainer" type="TextureRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.654902 )
+margin_left = 6.0
+margin_top = 3.0
+margin_right = 72.0
+margin_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hearth1" type="AnimatedSprite" parent="HealthContainer"]
+position = Vector2( 21.5, 15.75 )
+frames = ExtResource( 3 )
+animation = "Small Heart"
+frame = 5
+playing = true
+
+[node name="hearth2" type="AnimatedSprite" parent="HealthContainer"]
+position = Vector2( 33.1541, 16.8095 )
+frames = ExtResource( 3 )
+animation = "Small Heart"
+frame = 4
+playing = true
+
+[node name="hearth3" type="AnimatedSprite" parent="HealthContainer"]
+position = Vector2( 43.4839, 16.5446 )
+frames = ExtResource( 3 )
+animation = "Small Heart"
+frame = 4
+playing = true

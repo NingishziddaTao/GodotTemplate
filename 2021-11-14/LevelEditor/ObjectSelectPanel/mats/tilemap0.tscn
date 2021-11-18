@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LevelEditor/ObjectSelectPanel/mats/tilemap0.vs" type="Script" id=1]
+
+[node name="tilemap0" type="TextureRect" groups=[
+"autotile_containers",
+]]
+margin_right = 30.0
+margin_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+expand = true
+script = ExtResource( 1 )

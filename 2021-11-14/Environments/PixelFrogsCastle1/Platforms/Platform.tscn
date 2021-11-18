@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Environments/PixelFrogsCastle1/mats/Decorations (32x32).png" type="Texture" id=1]
+[ext_resource path="res://Environments/PixelFrogsCastle1/Platforms/Platform.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 65.0528, 65.8992, 127.109, 10.8711 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 62, 10 )
+
+[node name="Platform" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="atlas" type="Sprite" parent="."]
+position = Vector2( 1.25, 2 )
+texture = SubResource( 1 )
+
+[node name="rect" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 2 )
+one_way_collision = true
+one_way_collision_margin = 18.5
+
+[node name="detect" type="Area2D" parent="."]
+
+[node name="area" type="CollisionShape2D" parent="detect"]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="detect" to="." method="_on_detect_body_entered"]
